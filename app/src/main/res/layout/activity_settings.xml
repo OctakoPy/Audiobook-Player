@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/background_black"
+    android:padding="16dp">
+
+    <!-- Settings Title -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Settings"
+        android:textColor="@color/milky_white"
+        android:textSize="24sp"
+        android:layout_gravity="center_horizontal"
+        android:paddingBottom="24dp" />
+
+    <!-- Rewind/Fastforward Setting -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingBottom="16dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Rewind/Fastforward"
+            android:textColor="@color/milky_white"
+            android:textSize="16sp" />
+
+        <Spinner
+            android:id="@+id/spinner_rewind_value"
+            android:layout_width="240dp"
+            android:layout_height="96dp"
+            android:layout_gravity="center_vertical"
+            android:background="@android:color/transparent"
+            android:spinnerMode="dropdown"
+            android:popupBackground="@color/background_black"
+            android:entries="@array/rewind_values"
+            android:padding="8dp" />
+    </LinearLayout>
+
+    <!-- Autoplay Next Book Setting -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingBottom="16dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Autoplay next book on completion"
+            android:textColor="@color/milky_white"
+            android:textSize="16sp" />
+
+        <CheckBox
+            android:id="@+id/checkbox_autoplay_next"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:buttonTint="@color/milky_white"
+            android:layout_gravity="center_vertical"
+            android:padding="8dp" />
+    </LinearLayout>
+
+    <!-- Footer with Version, Previous Icon, and Copyright -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/version"
+            android:textColor="@color/milky_white"
+            android:textSize="14sp"
+            android:gravity="start" />
+
+        <ImageView
+            android:id="@+id/image_previous"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_finished"
+            android:layout_gravity="center"
+            android:contentDescription="Previous" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/copyright"
+            android:textColor="@color/milky_white"
+            android:textSize="14sp"
+            android:gravity="end" />
+    </LinearLayout>
+
+</LinearLayout>

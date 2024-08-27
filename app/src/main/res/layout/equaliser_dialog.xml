@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/tvEqualiserTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/equaliser_settings"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:paddingBottom="8dp" />
+
+    <TextView
+        android:id="@+id/tvBass"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/bass"
+        android:textSize="16sp"
+        android:paddingBottom="4dp" />
+
+    <SeekBar
+        android:id="@+id/seekBarBass"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:max="100"
+        android:progress="50" />
+
+    <TextView
+        android:id="@+id/tvTreble"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/treble"
+        android:textSize="16sp"
+        android:paddingTop="12dp"
+        android:paddingBottom="4dp" />
+
+    <SeekBar
+        android:id="@+id/seekBarTreble"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:max="100"
+        android:progress="50" />
+</LinearLayout>

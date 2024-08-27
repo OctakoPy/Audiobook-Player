@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!-- Top sticky row for current directory path -->
+    <TextView
+        android:id="@+id/tvDirectoryPath"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/background_black"
+        android:textColor="@color/milky_white"
+        android:padding="16dp" />
+
+    <!-- RecyclerView for files and folders -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvFiles"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@color/background_black"
+        android:layout_weight="1"/>
+
+    <!-- Bottom sticky row with three columns -->
+    <LinearLayout
+        android:id="@+id/bottomBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/background_black">
+
+        <ImageButton
+            android:id="@+id/currentlyPlaying"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:scaleType="centerInside"
+            android:src="@drawable/ic_currently_playing"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="Previous folder"/>
+
+        <ImageButton
+            android:id="@+id/btnPreviousFolder"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:scaleType="centerInside"
+            android:src="@drawable/ic_previous_folder"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="Previous folder"/>
+
+        <ImageButton
+            android:id="@+id/settings"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:scaleType="centerInside"
+            android:src="@drawable/ic_settings"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="Settings"/>
+    </LinearLayout>
+
+</LinearLayout>

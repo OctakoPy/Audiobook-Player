@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/swipeRefreshLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/background_black">
+
+        <!-- Row 1: Timer Icon, Title, Percentage of Book Remaining -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2"
+            android:orientation="horizontal">
+
+            <!-- Timer Icon and Remaining Time -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:background="@drawable/border">
+
+                <ImageView
+                    android:id="@+id/timerIcon"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/ic_timer_neutral"
+                    android:contentDescription="@string/timer_icon"
+                    android:scaleType="centerInside" />
+
+                <TextView
+                    android:id="@+id/remainingTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:text="@string/timer_not_set"
+                    android:textColor="@color/milky_white"
+                    android:textSize="18sp"
+                    android:background="@android:color/transparent"
+                    android:padding="4dp"
+                    android:gravity="center"/>
+            </LinearLayout>
+
+            <!-- Title -->
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="@string/title"
+                android:gravity="center"
+                android:textSize="18sp"
+                android:textColor="@color/milky_white"
+                android:background="@drawable/border"/>
+
+            <!-- Book Percentage -->
+            <TextView
+                android:id="@+id/bookPercentage"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="@string/book_percentage"
+                android:gravity="center"
+                android:textSize="18sp"
+                android:textColor="@color/milky_white"
+                android:background="@drawable/border"/>
+        </LinearLayout>
+
+
+        <!-- Row 2: Seekbar, Time Listened, Time remaining, total duration of book -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:background="@drawable/border">
+
+            <SeekBar
+                android:id="@+id/seekBar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/timeListened"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/time_listened"
+                    android:gravity="center"
+                    android:textSize="16sp"
+                    android:textColor="@color/milky_white" />
+
+                <TextView
+                    android:id="@+id/timeRemaining"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/time_remaining"
+                    android:gravity="center"
+                    android:textSize="16sp"
+                    android:textColor="@color/milky_white" />
+
+                <TextView
+                    android:id="@+id/totalDuration"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/total_duration"
+                    android:gravity="center"
+                    android:textSize="16sp"
+                    android:textColor="@color/milky_white" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Row 3: Current Playback speed, Bookmark Icon, Equaliser Icon -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/playbackSpeedButton"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:text="@string/playback_speed_label"
+                android:textColor="@color/milky_white"
+                android:textSize="16sp"
+                android:layout_weight="1"
+                android:padding="8dp"
+                android:background="@drawable/border"
+                android:clickable="true"
+                android:focusable="true"
+                />
+
+            <ImageView
+                android:id="@+id/bookmarkIcon"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:src="@drawable/ic_add_bookmark"
+                android:contentDescription="@string/bookmark_icon"
+                android:scaleType="centerInside"
+                android:background="@drawable/border"/>
+
+            <ImageView
+                android:id="@+id/equaliserIcon"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:src="@drawable/ic_equalizer"
+                android:contentDescription="@string/equaliser_icon"
+                android:scaleType="centerInside"
+                android:background="@drawable/border"/>
+        </LinearLayout>
+
+        <!-- Row 4: Skip Left, Play/Pause, Skip Right -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="3"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/skipLeft"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:src="@drawable/ic_previous"
+                android:contentDescription="@string/skip_left"
+                android:scaleType="centerInside"
+                android:background="@drawable/border"/>
+
+            <ImageView
+                android:id="@+id/playPause"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:src="@drawable/ic_play"
+                android:contentDescription="@string/play_pause"
+                android:scaleType="centerInside"
+                android:background="@drawable/border"/>
+
+
+            <ImageView
+                android:id="@+id/skipRight"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:src="@drawable/ic_next"
+                android:contentDescription="@string/skip_right"
+                android:scaleType="centerInside"
+                android:background="@drawable/border"/>
+        </LinearLayout>
+
+        <!-- Row 5: Rewind, Menu, Fast Forward -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="3"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/rewind"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:src="@drawable/ic_rewind10seconds"
+                android:contentDescription="@string/rewind"
+                android:scaleType="centerInside"
+                android:background="@drawable/border"/>
+
+            <ImageView
+                android:id="@+id/menu"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:src="@drawable/ic_menu"
+                android:contentDescription="@string/menu"
+                android:scaleType="centerInside"
+                android:background="@drawable/border"/>
+
+            <ImageView
+                android:id="@+id/fastForward"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:src="@drawable/ic_skip10seconds"
+                android:contentDescription="@string/fast_forward"
+                android:scaleType="centerInside"
+                android:background="@drawable/border"/>
+
+
+        </LinearLayout>
+
+        <!-- Row 6: Set Timer, Bookmarks, Settings -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/amp"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:src="@drawable/ic_amp"
+                android:contentDescription="@string/amp_description"
+                android:scaleType="centerInside"
+                android:background="@drawable/border"/>
+
+            <ImageView
+                android:id="@+id/bookmarks"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:src="@drawable/ic_view_bookmarks"
+                android:contentDescription="@string/bookmarks"
+                android:scaleType="centerInside"
+                android:background="@drawable/border"/>
+
+            <ImageView
+                android:id="@+id/settings"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:src="@drawable/ic_settings"
+                android:contentDescription="@string/settings"
+                android:scaleType="centerInside"
+                android:background="@drawable/border"/>
+        </LinearLayout>
+
+    </LinearLayout>
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>

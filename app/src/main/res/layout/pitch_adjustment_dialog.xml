@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="@color/background_black">
+
+    <!-- Title -->
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="        Pitch        "
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="@color/milky_white"
+        android:layout_gravity="center_horizontal" />
+
+    <!-- Playback Speed Adjustment Layout -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <!-- Decrease Playback Speed Button -->
+        <Button
+            android:id="@+id/decreasePitch"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/decrease_speed_decrement"
+            android:textColor="@color/milky_white"
+            android:background="?attr/selectableItemBackground"
+            android:layout_marginEnd="8dp" />
+
+        <!-- Current Playback Speed -->
+        <TextView
+            android:id="@+id/currentPitch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/pitch_label"
+            android:textSize="16sp"
+            android:textColor="@color/milky_white"
+            android:gravity="center"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp" />
+
+        <!-- Increase Playback Speed Button -->
+        <Button
+            android:id="@+id/increasePitch"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/increase_speed_increment"
+            android:textColor="@color/milky_white"
+            android:background="?attr/selectableItemBackground"
+            android:layout_marginStart="8dp" />
+    </LinearLayout>
+
+</LinearLayout>
